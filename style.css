@@ -60,6 +60,7 @@ header {
 
 .nav-links a {
   color: #a3acc9;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -85,6 +86,22 @@ header {
   box-shadow: 0 0 80px #fff6c7;
   margin-bottom: 40px;
   position: relative;
+  animation: moonMove 4s infinite;
+}
+
+@keyframes moonMove {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 60px #fff6c7;
+  }
+  50% {
+    transform: translateY(-15px);
+    box-shadow: 0 0 100px #fff6c7;
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 60px #fff6c7;
+  }
 }
 
 .crater {
@@ -137,12 +154,31 @@ header {
   margin-top: 32px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hello,
+.hero h1,
+.hero h2,
+.hero-buttons {
+  animation: fadeIn 1s;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 28px;
   margin: 8px;
   border-radius: 30px;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn-full {
@@ -157,6 +193,7 @@ header {
 
 .btn:hover {
   box-shadow: 0 0 20px #fff6c7;
+  transform: scale(1.05);
 }
 
 .section {
@@ -208,11 +245,13 @@ header {
   border-radius: 16px;
   padding: 30px 20px;
   text-align: center;
+  transition: 0.3s;
 }
 
 .skill:hover {
   border-color: #fff6c7;
   box-shadow: 0 0 20px #fff6c7;
+  transform: translateY(-8px);
 }
 
 .icon {
@@ -234,10 +273,12 @@ header {
   border: 1px solid #1f2a4d;
   border-radius: 18px;
   overflow: hidden;
+  transition: 0.3s;
 }
 
 .project:hover {
   box-shadow: 0 0 25px #8ab4ff;
+  transform: translateY(-8px);
 }
 
 .project-img {
@@ -245,6 +286,11 @@ header {
   height: 220px;
   object-fit: cover;
   object-position: top;
+  transition: 0.3s;
+}
+
+.project:hover .project-img {
+  transform: scale(1.05);
 }
 
 .shopwave-img {
@@ -294,6 +340,7 @@ header {
   background-color: #111a3d;
   border: 1px solid #1f2a4d;
   border-radius: 12px;
+  transition: 0.3s;
 }
 
 .contact-link:hover {
